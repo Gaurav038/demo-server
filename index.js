@@ -50,8 +50,7 @@ app.post("/api/send_mail", cors(), async (req, res) => {
 
 	await transport.sendMail({
 		from: "youthtime038@gmail.com",
-		to: "gauravkarki038@gmail.com",
-    // to: "info@redpositive.in",
+    to: "info@redpositive.in",
 		subject: "Full-stack internship coding task",
 		html: `<div className="email" style="
         border: 1px solid black;
