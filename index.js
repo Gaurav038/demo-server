@@ -10,7 +10,11 @@ const dataRoute = require("./routes/data")
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(express.json())
-app.use(cors());
+app.use(cors({
+  credentials: true,
+  origin: true,
+  optionsSuccessStatus: 200,
+}))
 const PORT = process.env.PORT || 8000
 
 
