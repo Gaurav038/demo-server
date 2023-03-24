@@ -43,8 +43,8 @@ app.post("/api/send_mail", cors(), async (req, res) => {
 	const transport = nodemailer.createTransport({
     host: "smtp.gmail.com",
     auth: {
-        user: 'youthtime038@gmail.com',
-        pass: 'sxzvbjshcmiqzoaw'
+        user: process.env.EMAIL_ADD,
+        pass: process.env.EMAIL_PASS
 		}
 	})
 
